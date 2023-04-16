@@ -1,0 +1,13 @@
+# ninja log v5
+1	171	7033604099439309	build.ninja	9b2bd728d82c9e63
+8	822	7033604107896989	CMakeFiles/struktury_danych.dir/source/main.cpp.obj	17709b62e23e384e
+4	601	7033604281564989	CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj	ff4ec31ed66f3a6f
+602	795	7033604283456695	struktury_danych.exe	55409d2c4d434089
+3	612	7033605362574640	CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj	ff4ec31ed66f3a6f
+9	615	7033605362604677	CMakeFiles/struktury_danych.dir/source/main.cpp.obj	17709b62e23e384e
+615	730	7033605363715677	struktury_danych.exe	55409d2c4d434089
+3	595	7033605916918768	CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj	ff4ec31ed66f3a6f
+595	713	7033605918059810	struktury_danych.exe	55409d2c4d434089
+3	719	7033606604744496	CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj	ff4ec31ed66f3a6f
+9	725	7033606604814570	CMakeFiles/struktury_danych.dir/source/main.cpp.obj	17709b62e23e384e
+725	851	7033606606045682	struktury_danych.exe	55409d2c4d434089
