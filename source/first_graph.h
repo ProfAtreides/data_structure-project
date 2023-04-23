@@ -11,21 +11,29 @@
 using namespace std;
 
 struct node{
-    int value,cost;
+    int end_vertex,cost;
+    bool used;
     node* next_node;
 };
 
 struct edge{
-    int start_vertex,end_vertex,weight;
+    int start_vertex,end_vertex,possible_flow;
+};
+
+struct path{
+    node* nodes;
+    int flow_value,size,end_vertex;
+    path();
+    path operator+=(node *n);
+    node top();
 };
 
 class first_graph { // adjacency list refactor code later !
-
-
     int nodes_number;
-
+    int end_vertex;
 public:
     node** nodes;
+
     first_graph(edge edges[],int n, int nodes_number);
 
     ~first_graph();
@@ -34,9 +42,11 @@ public:
 
     void print_data();
 
-    void find_max_flow();
+    int find_max_flow();
 
     node* get_node(int end_vertex,int weight,node *nodes);
+
+    int find_path(path &path);
 };
 
 
