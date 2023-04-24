@@ -1,7 +1,9 @@
 #include <iostream>
 #include "first_graph.h"
-//#include <murder_me_in_my_sleep>
-//using should_have_studied_something_fun=NOT(PROGRAMMING)
+//#include <pain>
+//#include <suffering>
+
+//using nothing_useful
 
 using namespace std;
 
@@ -20,7 +22,6 @@ int main() {
     int n = sizeof(edges) / sizeof(edges[0]);
 
     first_graph graph(edges,n,N);
-
 
     cout << graph.find_max_flow()<<"\n";
     graph.print_data();

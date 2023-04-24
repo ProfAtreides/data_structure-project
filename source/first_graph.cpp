@@ -6,13 +6,13 @@
 
 first_graph::first_graph(edge edges[], int n, int nodes_number) {
 
-    nodes =  new node*[nodes_number]();
+    nodes_in_graph =  new node*[nodes_number]();
 
     this->nodes_number = nodes_number;
 
     int temp_end_vertex=0;
 
-    for (int i = 0 ;i < nodes_number;i++) nodes[i] = nullptr;
+    for (int i = 0 ;i < nodes_number;i++) nodes_in_graph[i] = nullptr;
 
     for(int  i =0 ;i < n; i++)
     {
@@ -22,9 +22,9 @@ first_graph::first_graph(edge edges[], int n, int nodes_number) {
 
         if(end_vertex > temp_end_vertex) temp_end_vertex = end_vertex;
 
-        node* temp_node = get_node(end_vertex,used,nodes[start_vertex]);
+        node* temp_node = get_node(end_vertex, used, nodes_in_graph[start_vertex]);
 
-        nodes[start_vertex] = temp_node;
+        nodes_in_graph[start_vertex] = temp_node;
     }
 
    end_vertex = temp_end_vertex;
@@ -38,10 +38,10 @@ void first_graph::print_data()
 {
     for (int i = 0; i < nodes_number; i++)
     {
-        while (nodes[i] != nullptr) {
-            cout << "(" << i << ", " << nodes[i]->end_vertex
-                 << ", " << nodes[i]->cost << ") ";
-            nodes[i] = nodes[i]->next_node;
+        while (nodes_in_graph[i] != nullptr) {
+            cout << "(" << i << ", " << nodes_in_graph[i]->end_vertex
+                 << ", " << nodes_in_graph[i]->cost << ") ";
+            nodes_in_graph[i] = nodes_in_graph[i]->next_node;
         }
         cout <<"\n";
     }
@@ -59,19 +59,12 @@ node *first_graph::get_node(int end_vertex, int weight, node *nodes)
 }
 
 first_graph::~first_graph() {
-    for (int i = 0; i < nodes_number; i++) delete[] nodes[i];
+    for (int i = 0; i < nodes_number; i++) delete[] nodes_in_graph[i];
 
-    delete[] nodes;
+    delete[] nodes_in_graph;
 }
 
-int first_graph::find_path(path &path) { // returns iterator of last vertex in path
-
-    while(path.top().end_vertex == end_vertex  ||
-          path.top().used == true) {
-        if(path.top().next_node != nullptr) path += path.top().next_node;
-
-    }
-
+bool first_graph::find_path(path &path) { // returns iterator of last vertex in path
     return 0;
 }
 
@@ -81,8 +74,21 @@ int first_graph::find_max_flow() {
 
     path path;
 
-    path += nodes[0];
-    find_path(path);
+    path.add(*nodes_in_graph[0]);
+
+
+    int min_flow_in_path = 9999999;
+
+
+    if(!find_path(path)) return -1;
+
+    for(int i = 0; i <path.size;i++)
+    {
+       if(path.nodes_in_path[i].cost < min_flow_in_path)
+       {
+           min_flow_in_path = path.nodes_in_path[i].cost;
+       }
+    }
 
     max_flow += find_path(path);
 
@@ -90,22 +96,23 @@ int first_graph::find_max_flow() {
 }
 
 path::path(){
+    nodes_in_path;
     flow_value = 0;
     size = 0;
     end_vertex = 0;
 }
 
-path path::operator+=(node *n) {
-    path temp;
-    temp.nodes = new node[size+1];
-    temp.nodes = this->nodes;
-    temp.size = this->size+1;
-    temp.nodes[size] = *n;
-    return temp;
+
+void path::print()
+{
+    for (int i = 0;i <size;i++)
+    {
+        cout <<nodes_in_path[i].end_vertex << " ";
+    }
+    cout <<"\n";
 }
 
-node path::top(){
-    return nodes[size-1];
+void path::add(node &n)
+{
+    nodes_in_path.push(n);
 }
-
-
