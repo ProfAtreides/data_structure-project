@@ -61,6 +61,24 @@ build CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles\struktury_danych.dir
   OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
 
+build CMakeFiles/struktury_danych.dir/source/vector.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/vector.cpp || cmake_object_order_depends_target_struktury_danych
+  DEP_FILE = CMakeFiles\struktury_danych.dir\source\vector.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\struktury_danych.dir
+  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
+
+build CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/graph_vector_adjacent.cpp || cmake_object_order_depends_target_struktury_danych
+  DEP_FILE = CMakeFiles\struktury_danych.dir\source\graph_vector_adjacent.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\struktury_danych.dir
+  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
+
+build CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/graph_two_dim_array.cpp || cmake_object_order_depends_target_struktury_danych
+  DEP_FILE = CMakeFiles\struktury_danych.dir\source\graph_two_dim_array.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\struktury_danych.dir
+  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target struktury_danych
@@ -69,7 +87,7 @@ build CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable struktury_danych.exe
 
-build struktury_danych.exe: CXX_EXECUTABLE_LINKER__struktury_danych_Debug CMakeFiles/struktury_danych.dir/source/main.cpp.obj CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj
+build struktury_danych.exe: CXX_EXECUTABLE_LINKER__struktury_danych_Debug CMakeFiles/struktury_danych.dir/source/main.cpp.obj CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj CMakeFiles/struktury_danych.dir/source/vector.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\struktury_danych.dir

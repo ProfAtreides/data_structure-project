@@ -5,7 +5,7 @@
 #pragma once
 #include <fstream>
 #include <iostream>
-#include "vector.h"
+#include "vector.cpp"
 
 #define STRUKTURY_DANYCH_FIRST_GRAPH_H
 
@@ -13,6 +13,7 @@ using namespace std;
 
 struct node{
     int end_vertex,cost;
+    bool used;
     node* next_node;
 };
 
@@ -20,23 +21,16 @@ struct edge{
     int start_vertex,end_vertex,possible_flow;
 };
 
-struct path{
-    vector<node> nodes_in_path;
-    int flow_value,size,end_vertex;
-    path();
-    void add(node& n);
-    void print();
-};
 
-class first_graph { // adjacency list refactor code later !
+class graph_adjacent_list { // adjacency list refactor code later !
     int nodes_number;
-    int end_vertex;
+    int vertice_number;
 public:
     node** nodes_in_graph;
 
-    first_graph(edge edges[],int n, int nodes_number);
+    graph_adjacent_list(edge edges[], int n, int nodes_number);
 
-    ~first_graph();
+    ~graph_adjacent_list();
 
     void load_data(fstream f);
 
@@ -46,7 +40,7 @@ public:
 
     node* get_node(int end_vertex,int weight,node *nodes);
 
-    bool find_path(path &path);
+    void find_path();
 };
 
 

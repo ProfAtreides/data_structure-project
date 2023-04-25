@@ -1,5 +1,5 @@
 #include <iostream>
-#include "first_graph.h"
+#include "graph_adjacent_list.h"
 //#include <pain>
 //#include <suffering>
 
@@ -21,7 +21,7 @@ int main() {
     int N = 8;
     int n = sizeof(edges) / sizeof(edges[0]);
 
-    first_graph graph(edges,n,N);
+    graph_adjacent_list graph(edges, n, N);
 
     cout << graph.find_max_flow()<<"\n";
     graph.print_data();

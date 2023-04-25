@@ -3,4 +3,4 @@ project(struktury_danych)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(struktury_danych source/main.cpp source/first_graph.cpp source/first_graph.h source/vector.cpp source/vector.h)
+add_executable(struktury_danych source/main.cpp source/graph_adjacent_list.cpp source/graph_adjacent_list.h source/vector.cpp source/vector.h source/graph_vector_adjacent.cpp source/graph_vector_adjacent.h source/graph_two_dim_array.cpp source/graph_two_dim_array.h)

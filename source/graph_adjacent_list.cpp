@@ -2,9 +2,9 @@
 // Created by dambr on 16.04.2023.
 //
 
-#include "first_graph.h"
+#include "graph_adjacent_list.h"
 
-first_graph::first_graph(edge edges[], int n, int nodes_number) {
+graph_adjacent_list::graph_adjacent_list(edge edges[], int n, int nodes_number) {
 
     nodes_in_graph =  new node*[nodes_number]();
 
@@ -27,14 +27,14 @@ first_graph::first_graph(edge edges[], int n, int nodes_number) {
         nodes_in_graph[start_vertex] = temp_node;
     }
 
-   end_vertex = temp_end_vertex;
+    vertice_number = temp_end_vertex;
 }
 
-void first_graph::load_data(fstream f) {
+void graph_adjacent_list::load_data(fstream f) {
 
 }
 
-void first_graph::print_data()
+void graph_adjacent_list::print_data()
 {
     for (int i = 0; i < nodes_number; i++)
     {
@@ -48,71 +48,43 @@ void first_graph::print_data()
 
 }
 
-node *first_graph::get_node(int end_vertex, int weight, node *nodes)
+node *graph_adjacent_list::get_node(int end_vertex, int weight, node *nodes)
 {
     node* temp_node = new node;
     temp_node->cost = weight;
     temp_node->end_vertex = end_vertex;
     temp_node->next_node = nodes;
+    temp_node->used =false;
 
     return temp_node;
 }
 
-first_graph::~first_graph() {
+graph_adjacent_list::~graph_adjacent_list() {
     for (int i = 0; i < nodes_number; i++) delete[] nodes_in_graph[i];
 
     delete[] nodes_in_graph;
 }
 
-bool first_graph::find_path(path &path) { // returns iterator of last vertex in path
-    return 0;
+void graph_adjacent_list::find_path() { // returns iterator of last vertex in path
+
+       bool used[vertice_number+1];
+       for(int i = 0; i < vertice_number + 1; i++) used[i] = false;
+
+       vector <int> vertice;
+
+
+
+
+
+
 }
 
-int first_graph::find_max_flow() {
+int graph_adjacent_list::find_max_flow() {
 
     int max_flow = 0;
-
-    path path;
-
-    path.add(*nodes_in_graph[0]);
 
 
     int min_flow_in_path = 9999999;
 
-
-    if(!find_path(path)) return -1;
-
-    for(int i = 0; i <path.size;i++)
-    {
-       if(path.nodes_in_path[i].cost < min_flow_in_path)
-       {
-           min_flow_in_path = path.nodes_in_path[i].cost;
-       }
-    }
-
-    max_flow += find_path(path);
-
-    return 0;
-}
-
-path::path(){
-    nodes_in_path;
-    flow_value = 0;
-    size = 0;
-    end_vertex = 0;
-}
-
-
-void path::print()
-{
-    for (int i = 0;i <size;i++)
-    {
-        cout <<nodes_in_path[i].end_vertex << " ";
-    }
-    cout <<"\n";
-}
-
-void path::add(node &n)
-{
-    nodes_in_path.push(n);
+    return max_flow;
 }

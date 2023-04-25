@@ -11,9 +11,10 @@ struct vector {
     int size,capacity;
     vector();
     ~vector();
-    bool push(T val);
-    bool pop();
-    bool clear();
+    void push(T val);
+    void remove(int index);
+    void remove(int index,int amout);
+    void clear();
     bool empty();
     T& operator [](int n);
 };
