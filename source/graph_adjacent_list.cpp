@@ -54,7 +54,6 @@ node *graph_adjacent_list::get_node(int end_vertex, int weight, node *nodes)
     temp_node->cost = weight;
     temp_node->end_vertex = end_vertex;
     temp_node->next_node = nodes;
-    temp_node->used =false;
 
     return temp_node;
 }
@@ -65,26 +64,41 @@ graph_adjacent_list::~graph_adjacent_list() {
     delete[] nodes_in_graph;
 }
 
-void graph_adjacent_list::find_path() { // returns iterator of last vertex in path
+void graph_adjacent_list::find_paths() { // returns iterator of last vertex in path
 
-       bool used[vertice_number+1];
-       for(int i = 0; i < vertice_number + 1; i++) used[i] = false;
+       bool used_vertices[vertice_number+1];
+       used_vertices[0] = true;
+       for(int i = 0; i < vertice_number + 1; i++) used_vertices[i] = false;
 
-       vector <int> vertice;
+       vector <vector<node>> possible_paths;
+       possible_paths.push(vector<node>());
+       possible_paths[0].push(*nodes_in_graph[0]);
 
-
-
-
-
-
+       while(possible_paths.size > 0)
+       {
+           for(int i = 0; i < possible_paths.size;i++)
+           {
+               node temp_node = *possible_paths[i].top().next_node;
+               if(used_vertices[temp_node.end_vertex]) possible_paths.remove(i);
+               if()
+           }
+       }
 }
 
-int graph_adjacent_list::find_max_flow() {
-
-    int max_flow = 0;
 
 
-    int min_flow_in_path = 9999999;
+int graph_adjacent_list::find_max_flow(vector <node> path) {
+
+    int max_flow = 247181;
+
+    for(int i =0; i< path.size;i++)
+    {
+        if(max_flow>path[i].cost) max_flow = path[i].cost;
+    }
 
     return max_flow;
+}
+
+int graph_adjacent_list::ford(){
+
 }

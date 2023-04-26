@@ -1,11 +1,9 @@
 #include <iostream>
 #include "graph_adjacent_list.h"
-//#include <pain>
-//#include <suffering>
-
-//using nothing_useful
 
 using namespace std;
+
+//https://www.techiedelight.com/graph-implementation-c-without-using-stl/
 
 int main() {
 
@@ -23,7 +21,6 @@ int main() {
 
     graph_adjacent_list graph(edges, n, N);
 
-    cout << graph.find_max_flow()<<"\n";
     graph.print_data();
     return 0;
 

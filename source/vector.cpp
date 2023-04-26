@@ -66,6 +66,11 @@ bool vector<T>::empty() {
     else return false;
 }
 
+template <typename T>
+T vector<T>::top()
+{
+    return data[size-1];
+}
 
 template <typename T>
 T& vector<T>::operator [](int n)

@@ -13,7 +13,6 @@ using namespace std;
 
 struct node{
     int end_vertex,cost;
-    bool used;
     node* next_node;
 };
 
@@ -25,6 +24,7 @@ struct edge{
 class graph_adjacent_list { // adjacency list refactor code later !
     int nodes_number;
     int vertice_number;
+    int max_flow;
 public:
     node** nodes_in_graph;
 
@@ -36,11 +36,13 @@ public:
 
     void print_data();
 
-    int find_max_flow();
+    int find_max_flow(vector <node> path);
+
+    int ford();
 
     node* get_node(int end_vertex,int weight,node *nodes);
 
-    void find_path();
+    void find_paths();
 };
 
 

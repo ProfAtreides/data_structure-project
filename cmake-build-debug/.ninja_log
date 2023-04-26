@@ -1,5 +1,5 @@
 # ninja log v5
-1	171	7041333707372146	build.ninja	9b2bd728d82c9e63
+1	171	7041507320260610	build.ninja	9b2bd728d82c9e63
 3	707	7040631748267407	CMakeFiles/struktury_danych.dir/source/main.cpp.obj	17709b62e23e384e
 3	611	7040632552180884	CMakeFiles/struktury_danych.dir/source/first_graph.cpp.obj	ff4ec31ed66f3a6f
 13	89	7040615238889078	CMakeFiles/struktury_danych.dir/source/vector.cpp.obj	f881dc637fbc71ad

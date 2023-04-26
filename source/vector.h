@@ -16,6 +16,7 @@ struct vector {
     void remove(int index,int amout);
     void clear();
     bool empty();
+    T top();
     T& operator [](int n);
 };
 
