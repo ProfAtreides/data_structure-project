@@ -3,10 +3,8 @@
 //
 #ifndef STRUKTURY_DANYCH_FIRST_GRAPH_H
 #pragma once
+#include "vector.h"
 #include <fstream>
-#include <iostream>
-#include "vector.cpp"
-
 #define STRUKTURY_DANYCH_FIRST_GRAPH_H
 
 using namespace std;

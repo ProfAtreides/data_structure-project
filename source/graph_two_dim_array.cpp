@@ -2,21 +2,26 @@
 // Created by dambr on 25.04.2023.
 //
 
-//Bilio
-//https://www.softwaretestinghelp.com/graph-implementation-cpp/
-
 #include "graph_two_dim_array.h"
+#include <fstream>
+#include <iostream>
+#include "vector.h"
 
-graph_two_dim_array::graph_two_dim_array(int size) {
-    this->size = size;
-    graph_matrix = new int*[size];
-    for(int i = 0; i < size;i++)
+//fifo , lifo queue
+
+graph_two_dim_array::graph_two_dim_array(int size,int **graph_array) {
+    this->size = size + 1;
+    this->graph_matrix = graph_array;
+    /*for(int i = 0; i < size;i++)
     {
-        graph_matrix[i] = new int[size];
-    }
+        this->graph_matrix[i] = new int[size];
+        for(int j=0;j<size;j++) this->graph_matrix[i][j] = graph_matrix[i][j];
+    }*/
+
 }
 
-void graph_two_dim_array::load_data() {
+
+graph_two_dim_array::~graph_two_dim_array() {
     for(int i = 0; i < size;i++)
     {
         delete graph_matrix[i];
@@ -24,35 +29,72 @@ void graph_two_dim_array::load_data() {
     delete []graph_matrix;
 }
 
-void graph_two_dim_array::bfs() {
+// Inspired by https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
 
-    vector <vector<int>> path;
-    path.push(vector<int>());
+bool graph_two_dim_array::bfs(int **resudal_matrix,int path[]) {
 
-    while(path.size>0)
-    {
-        for(int i=0;i<path.size;i++)
-        {
-            bool moved_forward = false;
-            for(int j = 0; j < size; j++)
-            {
-                if(graph_matrix[path[i].top()][j] > 0 || !moved_forward)
-                {
-                    path[i].push(j);
-                    moved_forward = true;
+    bool visited[size];
+    for(int i =0;i<size;i++) visited[i] = false;
+    int end = size-2;
+
+    // Create a queue, enqueue source vertex and mark source
+    // vertex as visited
+    vector<int> q;
+    q.push(0);
+    visited[0] = true;
+    path[0] = -1;
+
+    // Standard BFS Loop
+    while (!q.empty()) {
+        int u = q.top();
+        q.remove(q.size-1);
+
+        for (int v = 0; v < end; v++) {
+            if (visited[v] == false && resudal_matrix[u][v] > 0) {
+                if (v == end) {
+                    path[v] = u;
+                    return true;
                 }
-                else if(graph_matrix[path[i].top()][j] > 0 || moved_forward)
-                {
-                    path.push(path[i]);
-                    path[size-1].push(j);
-                }
+                q.push(v);
+                path[v] = u;
+                visited[v] = true;
             }
-            if(!moved_forward) path.remove(i);
         }
     }
+
+    return false;
 }
 
-int graph_two_dim_array::find_max_flow(vector<vector<int>> path) {
+int graph_two_dim_array::find_max_flow() {
+    int u, v, end = size-2;
+    int **resudal_matrix =  new int*[size];
+    for(int i =0;i<size;i++) resudal_matrix[i] = new int[size];
 
+    for (u = 0; u < size; u++)
+        for (v = 0; v < size; v++) resudal_matrix[u][v] = graph_matrix[u][v];
+
+    int path[size];
+
+    int max_flow = 0;
+
+    while (bfs(resudal_matrix,path)) {
+        int path_flow = INT_MAX;
+        for (v = end; v != 0; v = path[v]) {
+            u = path[v];
+            path_flow = std::min(path_flow, resudal_matrix[u][v]);
+        }
+
+        for (v = end; v != 0; v = path[v]) {
+            u = path[v];
+            resudal_matrix[u][v] -= path_flow;
+            resudal_matrix[v][u] += path_flow;
+        }
+
+        // Add path flow to overall flow
+        max_flow += path_flow;
+    }
+
+    // Return the overall flow
+    return max_flow;
 }
 

@@ -4,18 +4,24 @@
 
 #ifndef STRUKTURY_DANYCH_GRAPH_VECTOR_ADJACENT_H
 #include "vector.h"
+#include "pair.h"
+#include <fstream>
 #define STRUKTURY_DANYCH_GRAPH_VECTOR_ADJACENT_H
 
 
 class graph_vector_adjacent {
 
-    struct node{
-        int start_vertice,end_vertice,value;
-    };
+    //Vector of verticies, each vector has a vector of vertcies(first in pair)
+    //adjacent to the vertice with it's node weight
+    vector <vector<pair<int,int>>> verticies;
 
-    vector <vector<node>> links;
+    graph_vector_adjacent();
+    ~graph_vector_adjacent();
 
+    void load_data(); // !add data stream
 
+    int find_max_flow();
+    int bfs();
 };
 
 

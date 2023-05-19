@@ -3,6 +3,8 @@
 //
 
 #include "graph_adjacent_list.h"
+#include "vector.h"
+#include <iostream>
 
 graph_adjacent_list::graph_adjacent_list(edge edges[], int n, int nodes_number) {
 
@@ -66,23 +68,7 @@ graph_adjacent_list::~graph_adjacent_list() {
 
 void graph_adjacent_list::find_paths() { // returns iterator of last vertex in path
 
-       bool used_vertices[vertice_number+1];
-       used_vertices[0] = true;
-       for(int i = 0; i < vertice_number + 1; i++) used_vertices[i] = false;
 
-       vector <vector<node>> possible_paths;
-       possible_paths.push(vector<node>());
-       possible_paths[0].push(*nodes_in_graph[0]);
-
-       while(possible_paths.size > 0)
-       {
-           for(int i = 0; i < possible_paths.size;i++)
-           {
-               node temp_node = *possible_paths[i].top().next_node;
-               if(used_vertices[temp_node.end_vertex]) possible_paths.remove(i);
-               if()
-           }
-       }
 }
 
 
@@ -100,5 +86,5 @@ int graph_adjacent_list::find_max_flow(vector <node> path) {
 }
 
 int graph_adjacent_list::ford(){
-
+return 0;
 }

@@ -1,7 +1,7 @@
 //
 // Created by Dawid on 24.04.2023.
 //
-
+#pragma once
 #ifndef STRUKTURY_DANYCH_VECTOR_H
 #define STRUKTURY_DANYCH_VECTOR_H
 
@@ -13,7 +13,7 @@ struct vector {
     ~vector();
     void push(T val);
     void remove(int index);
-    void remove(int index,int amout);
+    void remove(int index,int amount);
     void clear();
     bool empty();
     T top();
