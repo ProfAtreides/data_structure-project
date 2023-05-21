@@ -41,6 +41,57 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = U$:/Project/struktury$ danych/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target program
+
+
+#############################################
+# Order-only phony target for program
+
+build cmake_object_order_depends_target_program: phony || CMakeFiles/program.dir
+
+build CMakeFiles/program.dir/source/bector.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/bector.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\bector.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\program.dir
+  OBJECT_FILE_DIR = CMakeFiles\program.dir\source
+
+build CMakeFiles/program.dir/source/pair.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/pair.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\pair.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\program.dir
+  OBJECT_FILE_DIR = CMakeFiles\program.dir\source
+
+build CMakeFiles/program.dir/source/graph_two_dim_array.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/graph_two_dim_array.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\graph_two_dim_array.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\program.dir
+  OBJECT_FILE_DIR = CMakeFiles\program.dir\source
+
+build CMakeFiles/program.dir/source/main.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/main.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\main.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\program.dir
+  OBJECT_FILE_DIR = CMakeFiles\program.dir\source
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target program
+
+
+#############################################
+# Link the executable program.exe
+
+build program.exe: CXX_EXECUTABLE_LINKER__program_Debug CMakeFiles/program.dir/source/bector.cpp.obj CMakeFiles/program.dir/source/pair.cpp.obj CMakeFiles/program.dir/source/graph_two_dim_array.cpp.obj CMakeFiles/program.dir/source/main.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\program.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = program.exe
+  TARGET_IMPLIB = libprogram.dll.a
+  TARGET_PDB = program.exe.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target struktury_danych
 
 
@@ -48,6 +99,18 @@ cmake_ninja_workdir = U$:/Project/struktury$ danych/cmake-build-debug/
 # Order-only phony target for struktury_danych
 
 build cmake_object_order_depends_target_struktury_danych: phony || CMakeFiles/struktury_danych.dir
+
+build CMakeFiles/struktury_danych.dir/source/bector.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/bector.cpp || cmake_object_order_depends_target_struktury_danych
+  DEP_FILE = CMakeFiles\struktury_danych.dir\source\bector.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\struktury_danych.dir
+  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
+
+build CMakeFiles/struktury_danych.dir/source/pair.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/pair.cpp || cmake_object_order_depends_target_struktury_danych
+  DEP_FILE = CMakeFiles\struktury_danych.dir\source\pair.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  OBJECT_DIR = CMakeFiles\struktury_danych.dir
+  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
 
 build CMakeFiles/struktury_danych.dir/source/main.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/main.cpp || cmake_object_order_depends_target_struktury_danych
   DEP_FILE = CMakeFiles\struktury_danych.dir\source\main.cpp.obj.d
@@ -57,12 +120,6 @@ build CMakeFiles/struktury_danych.dir/source/main.cpp.obj: CXX_COMPILER__struktu
 
 build CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/graph_adjacent_list.cpp || cmake_object_order_depends_target_struktury_danych
   DEP_FILE = CMakeFiles\struktury_danych.dir\source\graph_adjacent_list.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
-
-build CMakeFiles/struktury_danych.dir/source/vector.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/vector.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\vector.cpp.obj.d
   FLAGS = -g -std=gnu++23
   OBJECT_DIR = CMakeFiles\struktury_danych.dir
   OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
@@ -87,7 +144,7 @@ build CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj: CXX_CO
 #############################################
 # Link the executable struktury_danych.exe
 
-build struktury_danych.exe: CXX_EXECUTABLE_LINKER__struktury_danych_Debug CMakeFiles/struktury_danych.dir/source/main.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.obj CMakeFiles/struktury_danych.dir/source/vector.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj
+build struktury_danych.exe: CXX_EXECUTABLE_LINKER__struktury_danych_Debug CMakeFiles/struktury_danych.dir/source/bector.cpp.obj CMakeFiles/struktury_danych.dir/source/pair.cpp.obj CMakeFiles/struktury_danych.dir/source/main.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\struktury_danych.dir
@@ -123,6 +180,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build program: phony program.exe
+
 build struktury_danych: phony struktury_danych.exe
 
 # =============================================================================
@@ -133,7 +192,7 @@ build struktury_danych: phony struktury_danych.exe
 #############################################
 # Folder: U:/Project/struktury danych/cmake-build-debug
 
-build all: phony struktury_danych.exe
+build all: phony program.exe struktury_danych.exe
 
 # =============================================================================
 # Built-in targets

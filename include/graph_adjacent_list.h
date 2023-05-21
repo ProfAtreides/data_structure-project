@@ -1,11 +1,11 @@
 //
 // Created by dambr on 16.04.2023.
 //
-#ifndef STRUKTURY_DANYCH_FIRST_GRAPH_H
+
 #pragma once
 #include "vector.h"
 #include <fstream>
-#define STRUKTURY_DANYCH_FIRST_GRAPH_H
+
 
 using namespace std;
 
@@ -22,7 +22,7 @@ struct edge{
 class graph_adjacent_list { // adjacency list refactor code later !
     int nodes_number;
     int vertice_number;
-    int max_flow;
+    // int max_flow;
 public:
     node** nodes_in_graph;
 
@@ -48,4 +48,3 @@ public:
 
 
 
-#endif //STRUKTURY_DANYCH_FIRST_GRAPH_H

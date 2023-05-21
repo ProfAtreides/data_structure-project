@@ -2,8 +2,7 @@
 // Created by dambr on 16.04.2023.
 //
 
-#include "graph_adjacent_list.h"
-#include "vector.h"
+#include "../include/graph_adjacent_list.h"
 #include <iostream>
 
 graph_adjacent_list::graph_adjacent_list(edge edges[], int n, int nodes_number) {

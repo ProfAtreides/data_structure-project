@@ -2,10 +2,26 @@
 // Created by Dawid on 24.04.2023.
 //
 
-#include "vector.h"
+#pragma once
 
 template <typename T>
-vector<T>::vector(){
+class vector {
+public:
+    T* data;
+    int size,capacity;
+    vector();
+    ~vector();
+    void push(T val);
+    void remove(int index);
+    void remove(int index,int amount);
+    void clear();
+    bool empty();
+    T top();
+    T& operator [](int n);
+};
+
+template<typename T>
+vector<T>::vector() {
     size = 0;
     capacity = 2;
     data = new T[capacity];
@@ -45,11 +61,11 @@ void vector<T>::remove(int index, int amount) {
     if(index + amount > size) {
         return;
     }
-for(int i = index;i < size - amount;i++)
-{
-    data[i] = data[i+amount];
-}
-size-=amount;
+    for(int i = index;i < size - amount;i++)
+    {
+        data[i] = data[i+amount];
+    }
+    size-=amount;
 }
 
 

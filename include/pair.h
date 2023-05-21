@@ -2,7 +2,13 @@
 // Created by Dawid on 26.04.2023.
 //
 
-#include "pair.h"
+template <typename T, typename Y>
+class pair {
+public:
+    T first;
+    Y second;
+    pair(T first, Y second);
+};
 
 template<typename T,typename Y>
 pair<T,Y>::pair(T first, Y second) {

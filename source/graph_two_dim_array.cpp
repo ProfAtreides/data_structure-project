@@ -2,37 +2,47 @@
 // Created by dambr on 25.04.2023.
 //
 
-#include "graph_two_dim_array.h"
+
+#include "../include/graph_two_dim_array.h"
 #include <fstream>
 #include <iostream>
-#include "vector.h"
+#include "../include/vector.h"
+// #include <pain>
+// #include <suffering>
 
 //fifo , lifo queue
 
-graph_two_dim_array::graph_two_dim_array(int size,int **graph_array) {
-    this->size = size + 1;
-    this->graph_matrix = graph_array;
-    /*for(int i = 0; i < size;i++)
+graph_two_dim_array::graph_two_dim_array(std::string data,int size)
+{
+    std::ifstream stream(data);
+    graph_matrix = new int*[size];
+    this->size = size;
+
+    for(int i =0;i<size;i++)
     {
-        this->graph_matrix[i] = new int[size];
-        for(int j=0;j<size;j++) this->graph_matrix[i][j] = graph_matrix[i][j];
-    }*/
+        graph_matrix[i] = new int[size];
+        for(int j = 0;j<size;j++)
+        {
+            stream >> graph_matrix[i][j];
+        }
+    }
 
 }
 
 
-graph_two_dim_array::~graph_two_dim_array() {
+graph_two_dim_array::~graph_two_dim_array()
+{
     for(int i = 0; i < size;i++)
     {
-        delete graph_matrix[i];
+        delete[] graph_matrix[i];
     }
-    delete []graph_matrix;
+    delete[] graph_matrix;
 }
 
 // Inspired by https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/
 
-bool graph_two_dim_array::bfs(int **resudal_matrix,int path[]) {
-
+bool graph_two_dim_array::bfs(int **resudal_matrix,int path[])
+{
     bool visited[size];
     for(int i =0;i<size;i++) visited[i] = false;
     int end = size-2;
@@ -65,19 +75,30 @@ bool graph_two_dim_array::bfs(int **resudal_matrix,int path[]) {
     return false;
 }
 
-int graph_two_dim_array::find_max_flow() {
-    int u, v, end = size-2;
+int graph_two_dim_array::find_max_flow()
+{
+    int u, v, end = size-1;
     int **resudal_matrix =  new int*[size];
-    for(int i =0;i<size;i++) resudal_matrix[i] = new int[size];
+    for(int i =0;i<size;i++)
+    {
+        resudal_matrix[i] = new int[size];
+    }
 
-    for (u = 0; u < size; u++)
-        for (v = 0; v < size; v++) resudal_matrix[u][v] = graph_matrix[u][v];
+    for (u = 0; u < size - 1; u++)
+    {
+        for (v = 0; v < size - 1; v++)
+        {
+            resudal_matrix[u][v] = graph_matrix[u][v];
+        }
+    }
+
 
     int path[size];
 
     int max_flow = 0;
 
-    while (bfs(resudal_matrix,path)) {
+    while (bfs(resudal_matrix,path))
+    {
         int path_flow = INT_MAX;
         for (v = end; v != 0; v = path[v]) {
             u = path[v];
@@ -96,5 +117,10 @@ int graph_two_dim_array::find_max_flow() {
 
     // Return the overall flow
     return max_flow;
+}
+
+graph_two_dim_array::graph_two_dim_array() {
+    size = 0;
+    graph_matrix = new int*[0];
 }
 
