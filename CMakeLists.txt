@@ -7,7 +7,7 @@ include_directories(include)
 
 set(SOURCES
         source/graph_two_dim_array.cpp source/graph_vector_adjacent.cpp source/graph_adjacent_list.cpp
-        source/main.cpp)
+        source/main.cpp include/graph.h)
 
 add_executable(program ${SOURCES})
 

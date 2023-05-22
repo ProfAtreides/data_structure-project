@@ -1,0 +1,130 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+2
+Microsoft (R) Kompilator optymalizujący C/C++, wersja 19.29.30137 dla architektury x86
+Copyright (C) Microsoft Corporation. Wszystkie prawa zastrzeżone.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.29.30137.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+LINK : fatal error LNK1104: nie można otworzyć pliku "kernel32.lib"
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+2
+Microsoft (R) Kompilator optymalizujący C/C++, wersja 19.29.30137 dla architektury x86
+Copyright (C) Microsoft Corporation. Wszystkie prawa zastrzeżone.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.29.30137.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+LINK : fatal error LNK1104: nie można otworzyć pliku "kernel32.lib"
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_9c54c && [1/2] Building C object CMakeFiles\cmTC_9c54c.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_9c54c.exe
+FAILED: cmTC_9c54c.exe 
+cmd.exe /C "cd . && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9c54c.dir --rc=rc --mt=CMAKE_MT-NOTFOUND --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo CMakeFiles\cmTC_9c54c.dir\CMakeCCompilerABI.c.obj  /out:cmTC_9c54c.exe /implib:cmTC_9c54c.lib /pdb:cmTC_9c54c.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+RC Pass 1: command "rc /fo CMakeFiles\cmTC_9c54c.dir/manifest.res CMakeFiles\cmTC_9c54c.dir/manifest.rc" failed (exit code 0) with the following output:
+Nie można odnaleźć określonego pliku
+ninja: build stopped: subcommand failed.
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_47f64 && [1/2] Building C object CMakeFiles\cmTC_47f64.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_47f64.exe
+FAILED: cmTC_47f64.exe 
+cmd.exe /C "cd . && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_47f64.dir --rc=rc --mt=CMAKE_MT-NOTFOUND --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo CMakeFiles\cmTC_47f64.dir\testCCompiler.c.obj  /out:cmTC_47f64.exe /implib:cmTC_47f64.lib /pdb:cmTC_47f64.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+RC Pass 1: command "rc /fo CMakeFiles\cmTC_47f64.dir/manifest.res CMakeFiles\cmTC_47f64.dir/manifest.rc" failed (exit code 0) with the following output:
+Nie można odnaleźć określonego pliku
+ninja: build stopped: subcommand failed.
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe 
+Build flags: /DWIN32;/D_WINDOWS
+Id flags:  
+
+The output was:
+2
+Microsoft (R) Kompilator optymalizujący C/C++, wersja 19.29.30137 dla architektury x86
+Copyright (C) Microsoft Corporation. Wszystkie prawa zastrzeżone.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.29.30137.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+LINK : fatal error LNK1104: nie można otworzyć pliku "kernel32.lib"
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+2
+Microsoft (R) Kompilator optymalizujący C/C++, wersja 19.29.30137 dla architektury x86
+Copyright (C) Microsoft Corporation. Wszystkie prawa zastrzeżone.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.29.30137.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+LINK : fatal error LNK1104: nie można otworzyć pliku "kernel32.lib"
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_9e323 && [1/2] Building C object CMakeFiles\cmTC_9e323.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_9e323.exe
+FAILED: cmTC_9e323.exe 
+cmd.exe /C "cd . && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_9e323.dir --rc=rc --mt=CMAKE_MT-NOTFOUND --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo CMakeFiles\cmTC_9e323.dir\CMakeCCompilerABI.c.obj  /out:cmTC_9e323.exe /implib:cmTC_9e323.lib /pdb:cmTC_9e323.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+RC Pass 1: command "rc /fo CMakeFiles\cmTC_9e323.dir/manifest.res CMakeFiles\cmTC_9e323.dir/manifest.rc" failed (exit code 0) with the following output:
+Nie można odnaleźć określonego pliku
+ninja: build stopped: subcommand failed.
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_677d0 && [1/2] Building C object CMakeFiles\cmTC_677d0.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_677d0.exe
+FAILED: cmTC_677d0.exe 
+cmd.exe /C "cd . && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_677d0.dir --rc=rc --mt=CMAKE_MT-NOTFOUND --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo CMakeFiles\cmTC_677d0.dir\testCCompiler.c.obj  /out:cmTC_677d0.exe /implib:cmTC_677d0.lib /pdb:cmTC_677d0.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+RC Pass 1: command "rc /fo CMakeFiles\cmTC_677d0.dir/manifest.res CMakeFiles\cmTC_677d0.dir/manifest.rc" failed (exit code 0) with the following output:
+Nie można odnaleźć określonego pliku
+ninja: build stopped: subcommand failed.
+
+
+

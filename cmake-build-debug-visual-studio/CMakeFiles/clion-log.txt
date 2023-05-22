@@ -1,0 +1,38 @@
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe" -G Ninja -S "U:\Project\struktury danych" -B "U:\Project\struktury danych\cmake-build-debug-visual-studio"
+-- The C compiler identification is MSVC 19.29.30137.0
+-- The CXX compiler identification is MSVC 19.29.30137.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe - broken
+CMake Error at C:/Program Files/JetBrains/CLion 2022.2.4/bin/cmake/win/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake:69 (message):
+  The C compiler
+
+    "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe cmTC_677d0 && [1/2] Building C object CMakeFiles\cmTC_677d0.dir\testCCompiler.c.obj
+    [2/2] Linking C executable cmTC_677d0.exe
+    FAILED: cmTC_677d0.exe 
+    cmd.exe /C "cd . && "C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_677d0.dir --rc=rc --mt=CMAKE_MT-NOTFOUND --manifests  -- C:\PROGRA~2\MICROS~3\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo CMakeFiles\cmTC_677d0.dir\testCCompiler.c.obj  /out:cmTC_677d0.exe /implib:cmTC_677d0.lib /pdb:cmTC_677d0.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+    RC Pass 1: command "rc /fo CMakeFiles\cmTC_677d0.dir/manifest.res CMakeFiles\cmTC_677d0.dir/manifest.rc" failed (exit code 0) with the following output:
+    Nie można odnaleźć określonego pliku
+    ninja: build stopped: subcommand failed.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeOutput.log".
+See also "U:/Project/struktury danych/cmake-build-debug-visual-studio/CMakeFiles/CMakeError.log".

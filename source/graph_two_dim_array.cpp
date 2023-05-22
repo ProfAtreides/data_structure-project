@@ -45,7 +45,7 @@ bool graph_two_dim_array::bfs(int **resudal_matrix,int path[])
 {
     bool visited[size];
     for(int i =0;i<size;i++) visited[i] = false;
-    int end = size-2;
+    int end = size-1;
 
     // Create a queue, enqueue source vertex and mark source
     // vertex as visited
