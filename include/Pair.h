@@ -3,15 +3,22 @@
 //
 
 template <typename T, typename Y>
-class pair {
+class Pair{
 public:
     T first;
     Y second;
-    pair(T first, Y second);
+    Pair();
+    Pair(T first, Y second);
 };
 
 template<typename T,typename Y>
-pair<T,Y>::pair(T first, Y second) {
+Pair<T,Y>::Pair()
+= default;
+
+template<typename T,typename Y>
+Pair<T,Y>::Pair(T first, Y second) {
     this->first = first;
     this->second = second;
 }
+
+

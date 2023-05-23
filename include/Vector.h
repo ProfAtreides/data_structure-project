@@ -5,13 +5,14 @@
 #pragma once
 
 template <typename T>
-class vector {
+class Vector {
 public:
     T* data;
-    int size,capacity;
-    vector();
-    ~vector();
+    long long size,capacity;
+    Vector();
+    ~Vector();
     void push(T val);
+    void resize(int size);
     void remove(int index);
     void remove(int index,int amount);
     void clear();
@@ -21,19 +22,19 @@ public:
 };
 
 template<typename T>
-vector<T>::vector() {
+Vector<T>::Vector() {
     size = 0;
     capacity = 2;
     data = new T[capacity];
 }
 
 template <typename T>
-vector<T>::~vector(){
+Vector<T>::~Vector(){
     delete []data;
 }
 
 template <typename T>
-void vector<T>::push(T val) {
+void Vector<T>::push(T val) {
     if (size == capacity) {
         T* temp = new T[capacity * 2];
         for (int i = 0; i < size; i++) {
@@ -48,7 +49,7 @@ void vector<T>::push(T val) {
 }
 
 template <typename T>
-void vector<T>::remove(int index) {
+void Vector<T>::remove(int index) {
     for(int i =index;i < size - 1;i++)
     {
         data[i] = data[i+1];
@@ -57,7 +58,7 @@ void vector<T>::remove(int index) {
 }
 
 template <typename T>
-void vector<T>::remove(int index, int amount) {
+void Vector<T>::remove(int index, int amount) {
     if(index + amount > size) {
         return;
     }
@@ -70,26 +71,38 @@ void vector<T>::remove(int index, int amount) {
 
 
 template <typename T>
-void vector<T>::clear(){
+void Vector<T>::clear(){
     size=0;
     capacity=1;
     data = new T[capacity];
 }
 
 template <typename T>
-bool vector<T>::empty() {
+bool Vector<T>::empty() {
     if(size == 0) return true;
     else return false;
 }
 
 template <typename T>
-T vector<T>::top()
+T Vector<T>::top()
 {
     return data[size-1];
 }
 
 template <typename T>
-T& vector<T>::operator [](int n)
+T& Vector<T>::operator [](int n)
 {
     return data[n];
+}
+
+template<typename T>
+void Vector<T>::resize(int size) {
+    this->size = size;
+    T* temp = new T[capacity * 2];
+    for (int i = 0; i < size; i++) {
+        temp[i] = data[i];
+    }
+    delete[] data;
+    data = temp;
+    capacity = (size >0)? size+2:1;
 }

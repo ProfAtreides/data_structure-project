@@ -82,31 +82,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/graph_adjacent_list.cpp">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/GraphAdjacentList.cpp">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/graph_adjacent_list.h">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/GraphAdjacentList.h">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/graph_two_dim_array.cpp">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/GraphTwoDimArray.cpp">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/graph_two_dim_array.h">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/GraphTwoDimArray.h">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/graph_vector_adjacent.cpp">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/Graph_vector_adjacent.cpp">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/graph_vector_adjacent.h">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/Graph_vector_adjacent.h">
 			<Option target="struktury_danych"/>
 		</Unit>
 		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/main.cpp">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/pair.cpp">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/Pair.cpp">
 			<Option target="struktury_danych"/>
 		</Unit>
-		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/pair.h">
+		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/Pair.h">
 			<Option target="struktury_danych"/>
 		</Unit>
 		<Unit filename="C:/Users/dambr/CLionProjects/data_structure-project/source/bector.cpp">

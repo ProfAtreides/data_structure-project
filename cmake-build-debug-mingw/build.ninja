@@ -49,22 +49,22 @@ cmake_ninja_workdir = U$:/Project/struktury$ danych/cmake-build-debug-mingw/
 
 build cmake_object_order_depends_target_program: phony || CMakeFiles/program.dir
 
-build CMakeFiles/program.dir/source/graph_two_dim_array.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/graph_two_dim_array.cpp || cmake_object_order_depends_target_program
-  DEP_FILE = CMakeFiles\program.dir\source\graph_two_dim_array.cpp.obj.d
+build CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/GraphTwoDimArray.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\GraphTwoDimArray.cpp.obj.d
   FLAGS = -g -std=gnu++23
   INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
   OBJECT_FILE_DIR = CMakeFiles\program.dir\source
 
-build CMakeFiles/program.dir/source/graph_vector_adjacent.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/graph_vector_adjacent.cpp || cmake_object_order_depends_target_program
-  DEP_FILE = CMakeFiles\program.dir\source\graph_vector_adjacent.cpp.obj.d
+build CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/GraphVectorAdjacent.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\GraphVectorAdjacent.cpp.obj.d
   FLAGS = -g -std=gnu++23
   INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
   OBJECT_FILE_DIR = CMakeFiles\program.dir\source
 
-build CMakeFiles/program.dir/source/graph_adjacent_list.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/graph_adjacent_list.cpp || cmake_object_order_depends_target_program
-  DEP_FILE = CMakeFiles\program.dir\source\graph_adjacent_list.cpp.obj.d
+build CMakeFiles/program.dir/source/GraphAdjacentList.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/GraphAdjacentList.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\GraphAdjacentList.cpp.obj.d
   FLAGS = -g -std=gnu++23
   INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
@@ -85,7 +85,7 @@ build CMakeFiles/program.dir/source/main.cpp.obj: CXX_COMPILER__program_Debug U$
 #############################################
 # Link the executable program.exe
 
-build program.exe: CXX_EXECUTABLE_LINKER__program_Debug CMakeFiles/program.dir/source/graph_two_dim_array.cpp.obj CMakeFiles/program.dir/source/graph_vector_adjacent.cpp.obj CMakeFiles/program.dir/source/graph_adjacent_list.cpp.obj CMakeFiles/program.dir/source/main.cpp.obj
+build program.exe: CXX_EXECUTABLE_LINKER__program_Debug CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.obj CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.obj CMakeFiles/program.dir/source/GraphAdjacentList.cpp.obj CMakeFiles/program.dir/source/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\program.dir

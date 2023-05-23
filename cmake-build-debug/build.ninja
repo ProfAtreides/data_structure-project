@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: struktury_danych
+# Project: program
 # Configurations: Debug
 # =============================================================================
 
@@ -49,27 +49,31 @@ cmake_ninja_workdir = U$:/Project/struktury$ danych/cmake-build-debug/
 
 build cmake_object_order_depends_target_program: phony || CMakeFiles/program.dir
 
-build CMakeFiles/program.dir/source/bector.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/bector.cpp || cmake_object_order_depends_target_program
-  DEP_FILE = CMakeFiles\program.dir\source\bector.cpp.obj.d
+build CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/GraphTwoDimArray.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\GraphTwoDimArray.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
   OBJECT_FILE_DIR = CMakeFiles\program.dir\source
 
-build CMakeFiles/program.dir/source/pair.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/pair.cpp || cmake_object_order_depends_target_program
-  DEP_FILE = CMakeFiles\program.dir\source\pair.cpp.obj.d
+build CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/GraphVectorAdjacent.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\GraphVectorAdjacent.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
   OBJECT_FILE_DIR = CMakeFiles\program.dir\source
 
-build CMakeFiles/program.dir/source/graph_two_dim_array.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/graph_two_dim_array.cpp || cmake_object_order_depends_target_program
-  DEP_FILE = CMakeFiles\program.dir\source\graph_two_dim_array.cpp.obj.d
+build CMakeFiles/program.dir/source/GraphAdjacentList.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/GraphAdjacentList.cpp || cmake_object_order_depends_target_program
+  DEP_FILE = CMakeFiles\program.dir\source\GraphAdjacentList.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
   OBJECT_FILE_DIR = CMakeFiles\program.dir\source
 
 build CMakeFiles/program.dir/source/main.cpp.obj: CXX_COMPILER__program_Debug U$:/Project/struktury$ danych/source/main.cpp || cmake_object_order_depends_target_program
   DEP_FILE = CMakeFiles\program.dir\source\main.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -I"U:/Project/struktury danych/include"
   OBJECT_DIR = CMakeFiles\program.dir
   OBJECT_FILE_DIR = CMakeFiles\program.dir\source
 
@@ -81,7 +85,7 @@ build CMakeFiles/program.dir/source/main.cpp.obj: CXX_COMPILER__program_Debug U$
 #############################################
 # Link the executable program.exe
 
-build program.exe: CXX_EXECUTABLE_LINKER__program_Debug CMakeFiles/program.dir/source/bector.cpp.obj CMakeFiles/program.dir/source/pair.cpp.obj CMakeFiles/program.dir/source/graph_two_dim_array.cpp.obj CMakeFiles/program.dir/source/main.cpp.obj
+build program.exe: CXX_EXECUTABLE_LINKER__program_Debug CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.obj CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.obj CMakeFiles/program.dir/source/GraphAdjacentList.cpp.obj CMakeFiles/program.dir/source/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\program.dir
@@ -92,67 +96,38 @@ build program.exe: CXX_EXECUTABLE_LINKER__program_Debug CMakeFiles/program.dir/s
   TARGET_PDB = program.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target struktury_danych
+# Object build statements for EXECUTABLE target randomiser
 
 
 #############################################
-# Order-only phony target for struktury_danych
+# Order-only phony target for randomiser
 
-build cmake_object_order_depends_target_struktury_danych: phony || CMakeFiles/struktury_danych.dir
+build cmake_object_order_depends_target_randomiser: phony || CMakeFiles/randomiser.dir
 
-build CMakeFiles/struktury_danych.dir/source/bector.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/bector.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\bector.cpp.obj.d
+build CMakeFiles/randomiser.dir/source/graphGenerator.cpp.obj: CXX_COMPILER__randomiser_Debug U$:/Project/struktury$ danych/source/graphGenerator.cpp || cmake_object_order_depends_target_randomiser
+  DEP_FILE = CMakeFiles\randomiser.dir\source\graphGenerator.cpp.obj.d
   FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
-
-build CMakeFiles/struktury_danych.dir/source/pair.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/pair.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\pair.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
-
-build CMakeFiles/struktury_danych.dir/source/main.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/main.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\main.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
-
-build CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/graph_adjacent_list.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\graph_adjacent_list.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
-
-build CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/graph_vector_adjacent.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\graph_vector_adjacent.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
-
-build CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj: CXX_COMPILER__struktury_danych_Debug U$:/Project/struktury$ danych/source/graph_two_dim_array.cpp || cmake_object_order_depends_target_struktury_danych
-  DEP_FILE = CMakeFiles\struktury_danych.dir\source\graph_two_dim_array.cpp.obj.d
-  FLAGS = -g -std=gnu++23
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
-  OBJECT_FILE_DIR = CMakeFiles\struktury_danych.dir\source
+  INCLUDES = -I"U:/Project/struktury danych/include"
+  OBJECT_DIR = CMakeFiles\randomiser.dir
+  OBJECT_FILE_DIR = CMakeFiles\randomiser.dir\source
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target struktury_danych
+# Link build statements for EXECUTABLE target randomiser
 
 
 #############################################
-# Link the executable struktury_danych.exe
+# Link the executable randomiser.exe
 
-build struktury_danych.exe: CXX_EXECUTABLE_LINKER__struktury_danych_Debug CMakeFiles/struktury_danych.dir/source/bector.cpp.obj CMakeFiles/struktury_danych.dir/source/pair.cpp.obj CMakeFiles/struktury_danych.dir/source/main.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj
+build randomiser.exe: CXX_EXECUTABLE_LINKER__randomiser_Debug CMakeFiles/randomiser.dir/source/graphGenerator.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\struktury_danych.dir
+  OBJECT_DIR = CMakeFiles\randomiser.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = struktury_danych.exe
-  TARGET_IMPLIB = libstruktury_danych.dll.a
-  TARGET_PDB = struktury_danych.exe.dbg
+  TARGET_FILE = randomiser.exe
+  TARGET_IMPLIB = librandomiser.dll.a
+  TARGET_PDB = randomiser.exe.dbg
 
 
 #############################################
@@ -182,7 +157,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build program: phony program.exe
 
-build struktury_danych: phony struktury_danych.exe
+build randomiser: phony randomiser.exe
 
 # =============================================================================
 # Folder targets.
@@ -192,7 +167,7 @@ build struktury_danych: phony struktury_danych.exe
 #############################################
 # Folder: U:/Project/struktury danych/cmake-build-debug
 
-build all: phony program.exe struktury_danych.exe
+build all: phony program.exe randomiser.exe
 
 # =============================================================================
 # Built-in targets
