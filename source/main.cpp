@@ -71,9 +71,9 @@ void speedtestBenchmarkGraph(Graph *graph, std::string output, int seed) {
     std::string optOutput = "../TestResults/" + output + "Opt/" + std::to_string(seed) + ".txt";
     std::string relOutput = "../TestResults/" + output + "Rel/" + std::to_string(seed) + ".txt";
     std::string pesOutput = "../TestResults/" + output + "Pes/" + std::to_string(seed) + ".txt";
-    test(graph, relOutput, 250,1500,100,seed,0.2);
-    test(graph, pesOutput,250 , 1500, 100,seed,0.4);
-    test(graph, pesOutput,250 , 1500, 100,seed,0.8);
+    test(graph, relOutput, 10,200,10,seed,0.2);
+    test(graph, pesOutput,10 , 200, 10,seed,0.4);
+    test(graph, pesOutput,10 , 200, 10,seed,0.8);
 }
 
 int main() {
@@ -81,7 +81,7 @@ int main() {
     GraphAdjacentList graph1;
     GraphTwoDimArray graph2;
     GraphVectorAdjacent graph3;
-    int seed=121;
+    int seed=77;
     for(int i = 0; i<1;i++,seed+=11)
     {
         speedtestBenchmarkGraph(&graph1, "AL",seed);
