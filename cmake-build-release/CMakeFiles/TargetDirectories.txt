@@ -1,0 +1,4 @@
+U:/Project/struktury danych/cmake-build-release/CMakeFiles/program.dir
+U:/Project/struktury danych/cmake-build-release/CMakeFiles/randomiser.dir
+U:/Project/struktury danych/cmake-build-release/CMakeFiles/edit_cache.dir
+U:/Project/struktury danych/cmake-build-release/CMakeFiles/rebuild_cache.dir
