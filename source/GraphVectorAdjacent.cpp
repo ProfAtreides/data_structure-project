@@ -33,6 +33,21 @@ void GraphVectorAdjacent::loadData(std::string source, int verticesNumber) {
     }
 }
 
+void GraphVectorAdjacent::loadData(int **matrix, int verticesNumber) {
+    this->graphSize = verticesNumber;
+    this->sinkIndex = graphSize - 1;
+    verticies = new Vector<Pair<int, int>>[verticesNumber];
+    verticeLevel =  new int[graphSize];
+
+    for (int i = 0; i < graphSize; i++) {
+        for (int j = 0; j < graphSize; j++) {
+            if (matrix[i][j] > 0) {
+                verticies[i].push(Pair(j,matrix[i][j]));
+            }
+        }
+    }
+}
+
 void GraphVectorAdjacent::printGraph() {
     for(int i = 0; i < graphSize; i++)
     {
@@ -110,17 +125,4 @@ int GraphVectorAdjacent::dinicMaxFlow() {
     return maxFlow;
 }
 
-void GraphVectorAdjacent::loadData(int **matrix, int verticesNumber) {
-    this->graphSize = verticesNumber;
-    this->sinkIndex = graphSize - 1;
-    verticies = new Vector<Pair<int, int>>[verticesNumber];
-    verticeLevel =  new int[graphSize];
 
-    for (int i = 0; i < graphSize; i++) {
-        for (int j = 0; j < graphSize; j++) {
-            if (matrix[i][j] > 0) {
-                verticies[i].push(Pair(j,matrix[i][j]));
-            }
-        }
-    }
-}

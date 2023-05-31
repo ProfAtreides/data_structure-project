@@ -1,6 +1,4 @@
 #include <iostream>
-#include <fstream>
-#include "../include/Vector.h"
 #include "../include/GraphAdjacentList.h"
 #include "../include/GraphVectorAdjacent.h"
 #include "../include/GraphTwoDimArray.h"
@@ -49,7 +47,7 @@ void testTxt(Graph *graph, std::string input, std::string output) {
 void test(Graph *graph, std::string output, int currentNumber, int endNumber, int increase, int seed,float intensity) {
     std::ofstream outputStream(output);
     for (; currentNumber < endNumber + 1; currentNumber += increase) {
-        int testsNumber = 1;
+        int testsNumber = 10;
         int temp;
         long long avgTime = 0;
         for (int i = 0; i < testsNumber; i++) {
@@ -67,13 +65,13 @@ void test(Graph *graph, std::string output, int currentNumber, int endNumber, in
 }
 
 
-void speedtestBenchmarkGraph(Graph *graph, std::string output, int seed) {
+void benchmarkGraph(Graph *graph, std::string output, int seed, int beginNumber, int endNumber, int increase) {
     std::string optOutput = "../TestResults/" + output + "Opt/" + std::to_string(seed) + ".txt";
     std::string relOutput = "../TestResults/" + output + "Rel/" + std::to_string(seed) + ".txt";
     std::string pesOutput = "../TestResults/" + output + "Pes/" + std::to_string(seed) + ".txt";
-    test(graph, relOutput, 10,200,10,seed,0.2);
-    test(graph, pesOutput,10 , 200, 10,seed,0.4);
-    test(graph, pesOutput,10 , 200, 10,seed,0.8);
+    test(graph, relOutput, beginNumber,endNumber,increase,seed,0.2);
+    test(graph, pesOutput,beginNumber , endNumber, increase,seed,0.4);
+    test(graph, pesOutput,beginNumber , endNumber, increase,seed,0.8);
 }
 
 int main() {
@@ -82,10 +80,9 @@ int main() {
     GraphTwoDimArray graph2;
     GraphVectorAdjacent graph3;
     int seed=77;
-    for(int i = 0; i<1;i++,seed+=11)
-    {
-        speedtestBenchmarkGraph(&graph1, "AL",seed);
-        speedtestBenchmarkGraph(&graph2, "TDA",seed);
-        speedtestBenchmarkGraph(&graph3, "VA",seed);
+    for(int i = 0; i<5;i++,seed+=11) {
+        benchmarkGraph(&graph1, "AL", seed, 10, 200, 5);
+        benchmarkGraph(&graph2, "TDA", seed, 10, 200, 5);
+        benchmarkGraph(&graph3, "VA", seed, 10, 200, 5);
     }
 }

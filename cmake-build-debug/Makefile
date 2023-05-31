@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\dambr\CLionProjects\data_structure-project
+CMAKE_SOURCE_DIR = C:\Users\dambr\OneDrive\Dokumenty\GitHub\data_structure-project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\dambr\CLionProjects\data_structure-project\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\dambr\OneDrive\Dokumenty\GitHub\data_structure-project\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\dambr\CLionProjects\data_structure-project\cmake-build-debug\CMakeFiles C:\Users\dambr\CLionProjects\data_structure-project\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\dambr\OneDrive\Dokumenty\GitHub\data_structure-project\cmake-build-debug\CMakeFiles C:\Users\dambr\OneDrive\Dokumenty\GitHub\data_structure-project\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\dambr\CLionProjects\data_structure-project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\dambr\OneDrive\Dokumenty\GitHub\data_structure-project\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,96 +116,133 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named struktury_danych
+# Target rules for targets named program
 
 # Build rule for target.
-struktury_danych: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 struktury_danych
-.PHONY : struktury_danych
+program: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 program
+.PHONY : program
 
 # fast build rule for target.
-struktury_danych/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/build
-.PHONY : struktury_danych/fast
+program/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/build
+.PHONY : program/fast
 
-source/graph_adjacent_list.obj: source/graph_adjacent_list.cpp.obj
-.PHONY : source/graph_adjacent_list.obj
+#=============================================================================
+# Target rules for targets named randomiser
 
-# target to build an object file
-source/graph_adjacent_list.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.obj
-.PHONY : source/graph_adjacent_list.cpp.obj
+# Build rule for target.
+randomiser: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 randomiser
+.PHONY : randomiser
 
-source/graph_adjacent_list.i: source/graph_adjacent_list.cpp.i
-.PHONY : source/graph_adjacent_list.i
+# fast build rule for target.
+randomiser/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\randomiser.dir\build.make CMakeFiles/randomiser.dir/build
+.PHONY : randomiser/fast
 
-# target to preprocess a source file
-source/graph_adjacent_list.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.i
-.PHONY : source/graph_adjacent_list.cpp.i
-
-source/graph_adjacent_list.s: source/graph_adjacent_list.cpp.s
-.PHONY : source/graph_adjacent_list.s
-
-# target to generate assembly for a file
-source/graph_adjacent_list.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_adjacent_list.cpp.s
-.PHONY : source/graph_adjacent_list.cpp.s
-
-source/graph_two_dim_array.obj: source/graph_two_dim_array.cpp.obj
-.PHONY : source/graph_two_dim_array.obj
+source/GraphAdjacentList.obj: source/GraphAdjacentList.cpp.obj
+.PHONY : source/GraphAdjacentList.obj
 
 # target to build an object file
-source/graph_two_dim_array.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.obj
-.PHONY : source/graph_two_dim_array.cpp.obj
+source/GraphAdjacentList.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphAdjacentList.cpp.obj
+.PHONY : source/GraphAdjacentList.cpp.obj
 
-source/graph_two_dim_array.i: source/graph_two_dim_array.cpp.i
-.PHONY : source/graph_two_dim_array.i
+source/GraphAdjacentList.i: source/GraphAdjacentList.cpp.i
+.PHONY : source/GraphAdjacentList.i
 
 # target to preprocess a source file
-source/graph_two_dim_array.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.i
-.PHONY : source/graph_two_dim_array.cpp.i
+source/GraphAdjacentList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphAdjacentList.cpp.i
+.PHONY : source/GraphAdjacentList.cpp.i
 
-source/graph_two_dim_array.s: source/graph_two_dim_array.cpp.s
-.PHONY : source/graph_two_dim_array.s
+source/GraphAdjacentList.s: source/GraphAdjacentList.cpp.s
+.PHONY : source/GraphAdjacentList.s
 
 # target to generate assembly for a file
-source/graph_two_dim_array.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_two_dim_array.cpp.s
-.PHONY : source/graph_two_dim_array.cpp.s
+source/GraphAdjacentList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphAdjacentList.cpp.s
+.PHONY : source/GraphAdjacentList.cpp.s
 
-source/graph_vector_adjacent.obj: source/graph_vector_adjacent.cpp.obj
-.PHONY : source/graph_vector_adjacent.obj
+source/GraphTwoDimArray.obj: source/GraphTwoDimArray.cpp.obj
+.PHONY : source/GraphTwoDimArray.obj
 
 # target to build an object file
-source/graph_vector_adjacent.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.obj
-.PHONY : source/graph_vector_adjacent.cpp.obj
+source/GraphTwoDimArray.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.obj
+.PHONY : source/GraphTwoDimArray.cpp.obj
 
-source/graph_vector_adjacent.i: source/graph_vector_adjacent.cpp.i
-.PHONY : source/graph_vector_adjacent.i
+source/GraphTwoDimArray.i: source/GraphTwoDimArray.cpp.i
+.PHONY : source/GraphTwoDimArray.i
 
 # target to preprocess a source file
-source/graph_vector_adjacent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.i
-.PHONY : source/graph_vector_adjacent.cpp.i
+source/GraphTwoDimArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.i
+.PHONY : source/GraphTwoDimArray.cpp.i
 
-source/graph_vector_adjacent.s: source/graph_vector_adjacent.cpp.s
-.PHONY : source/graph_vector_adjacent.s
+source/GraphTwoDimArray.s: source/GraphTwoDimArray.cpp.s
+.PHONY : source/GraphTwoDimArray.s
 
 # target to generate assembly for a file
-source/graph_vector_adjacent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/graph_vector_adjacent.cpp.s
-.PHONY : source/graph_vector_adjacent.cpp.s
+source/GraphTwoDimArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphTwoDimArray.cpp.s
+.PHONY : source/GraphTwoDimArray.cpp.s
+
+source/GraphVectorAdjacent.obj: source/GraphVectorAdjacent.cpp.obj
+.PHONY : source/GraphVectorAdjacent.obj
+
+# target to build an object file
+source/GraphVectorAdjacent.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.obj
+.PHONY : source/GraphVectorAdjacent.cpp.obj
+
+source/GraphVectorAdjacent.i: source/GraphVectorAdjacent.cpp.i
+.PHONY : source/GraphVectorAdjacent.i
+
+# target to preprocess a source file
+source/GraphVectorAdjacent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.i
+.PHONY : source/GraphVectorAdjacent.cpp.i
+
+source/GraphVectorAdjacent.s: source/GraphVectorAdjacent.cpp.s
+.PHONY : source/GraphVectorAdjacent.s
+
+# target to generate assembly for a file
+source/GraphVectorAdjacent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/GraphVectorAdjacent.cpp.s
+.PHONY : source/GraphVectorAdjacent.cpp.s
+
+source/graphGenerator.obj: source/graphGenerator.cpp.obj
+.PHONY : source/graphGenerator.obj
+
+# target to build an object file
+source/graphGenerator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\randomiser.dir\build.make CMakeFiles/randomiser.dir/source/graphGenerator.cpp.obj
+.PHONY : source/graphGenerator.cpp.obj
+
+source/graphGenerator.i: source/graphGenerator.cpp.i
+.PHONY : source/graphGenerator.i
+
+# target to preprocess a source file
+source/graphGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\randomiser.dir\build.make CMakeFiles/randomiser.dir/source/graphGenerator.cpp.i
+.PHONY : source/graphGenerator.cpp.i
+
+source/graphGenerator.s: source/graphGenerator.cpp.s
+.PHONY : source/graphGenerator.s
+
+# target to generate assembly for a file
+source/graphGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\randomiser.dir\build.make CMakeFiles/randomiser.dir/source/graphGenerator.cpp.s
+.PHONY : source/graphGenerator.cpp.s
 
 source/main.obj: source/main.cpp.obj
 .PHONY : source/main.obj
 
 # target to build an object file
 source/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/main.cpp.obj
 .PHONY : source/main.cpp.obj
 
 source/main.i: source/main.cpp.i
@@ -213,7 +250,7 @@ source/main.i: source/main.cpp.i
 
 # target to preprocess a source file
 source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/main.cpp.i
 .PHONY : source/main.cpp.i
 
 source/main.s: source/main.cpp.s
@@ -221,56 +258,8 @@ source/main.s: source/main.cpp.s
 
 # target to generate assembly for a file
 source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\program.dir\build.make CMakeFiles/program.dir/source/main.cpp.s
 .PHONY : source/main.cpp.s
-
-source/pair.obj: source/pair.cpp.obj
-.PHONY : source/pair.obj
-
-# target to build an object file
-source/pair.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/pair.cpp.obj
-.PHONY : source/pair.cpp.obj
-
-source/pair.i: source/pair.cpp.i
-.PHONY : source/pair.i
-
-# target to preprocess a source file
-source/pair.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/pair.cpp.i
-.PHONY : source/pair.cpp.i
-
-source/pair.s: source/pair.cpp.s
-.PHONY : source/pair.s
-
-# target to generate assembly for a file
-source/pair.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/pair.cpp.s
-.PHONY : source/pair.cpp.s
-
-source/vector.obj: source/vector.cpp.obj
-.PHONY : source/vector.obj
-
-# target to build an object file
-source/vector.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/vector.cpp.obj
-.PHONY : source/vector.cpp.obj
-
-source/vector.i: source/vector.cpp.i
-.PHONY : source/vector.i
-
-# target to preprocess a source file
-source/vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/vector.cpp.i
-.PHONY : source/vector.cpp.i
-
-source/vector.s: source/vector.cpp.s
-.PHONY : source/vector.s
-
-# target to generate assembly for a file
-source/vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\struktury_danych.dir\build.make CMakeFiles/struktury_danych.dir/source/vector.cpp.s
-.PHONY : source/vector.cpp.s
 
 # Help Target
 help:
@@ -280,25 +269,23 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... struktury_danych
-	@echo ... source/graph_adjacent_list.obj
-	@echo ... source/graph_adjacent_list.i
-	@echo ... source/graph_adjacent_list.s
-	@echo ... source/graph_two_dim_array.obj
-	@echo ... source/graph_two_dim_array.i
-	@echo ... source/graph_two_dim_array.s
-	@echo ... source/graph_vector_adjacent.obj
-	@echo ... source/graph_vector_adjacent.i
-	@echo ... source/graph_vector_adjacent.s
+	@echo ... program
+	@echo ... randomiser
+	@echo ... source/GraphAdjacentList.obj
+	@echo ... source/GraphAdjacentList.i
+	@echo ... source/GraphAdjacentList.s
+	@echo ... source/GraphTwoDimArray.obj
+	@echo ... source/GraphTwoDimArray.i
+	@echo ... source/GraphTwoDimArray.s
+	@echo ... source/GraphVectorAdjacent.obj
+	@echo ... source/GraphVectorAdjacent.i
+	@echo ... source/GraphVectorAdjacent.s
+	@echo ... source/graphGenerator.obj
+	@echo ... source/graphGenerator.i
+	@echo ... source/graphGenerator.s
 	@echo ... source/main.obj
 	@echo ... source/main.i
 	@echo ... source/main.s
-	@echo ... source/pair.obj
-	@echo ... source/pair.i
-	@echo ... source/pair.s
-	@echo ... source/vector.obj
-	@echo ... source/vector.i
-	@echo ... source/vector.s
 .PHONY : help
 
 

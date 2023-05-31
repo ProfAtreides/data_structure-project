@@ -7,13 +7,10 @@
 #include "../include/GraphTwoDimArray.h"
 
 
-//fifo , lifo queue
-
 GraphTwoDimArray::GraphTwoDimArray()
 {
-    this->sinkIndex = size - 1;
     this->size = -1;
-
+    this->sinkIndex = size - 1;
 }
 
 
@@ -24,6 +21,13 @@ GraphTwoDimArray::~GraphTwoDimArray()
         delete[] graphMatrix[i];
     }
     delete[] graphMatrix;
+}
+
+void GraphTwoDimArray::loadData(int **matrix, int size) {
+    this->graphMatrix = matrix;
+    this->sinkIndex = size-1;
+    this->verticeLevel = new int[size];
+    this->size=size;
 }
 
 int GraphTwoDimArray::dfsSendFlow(int currentFlow,Vector<int> &path) {
@@ -108,12 +112,6 @@ void GraphTwoDimArray::loadData(std::string input, int size) {
     data.close();
 }
 
-void GraphTwoDimArray::loadData(int **matrix, int size) {
-    this->graphMatrix = matrix;
-    this->sinkIndex = size-1;
-    this->verticeLevel = new int[size];
-    this->size=size;
-}
 
 
 

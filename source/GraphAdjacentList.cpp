@@ -55,7 +55,43 @@ void GraphAdjacentList::loadData(std::string fileName, int verticesNumber) {
 
 }
 
+void GraphAdjacentList::loadData(int **matrix, int verticesNumber) {
+    this->graphSize = verticesNumber;
+    Vector<Edge> storage;
+    for (int i = 0; i < graphSize; i++) {
+        for (int j = 0; j < graphSize; j++) {
+            if (matrix[i][j] > 0) {
+                storage.push({i, j, matrix[i][j]});
+            }
+        }
+    }
 
+    int nodesNumber = storage.size;
+
+    nodesInGraph = new Node *[graphSize]();
+
+    verticesLevel = new int[graphSize];
+
+    sinkIndex = graphSize - 1;
+
+    for (int i = 0; i < graphSize; i++) nodesInGraph[i] = nullptr;
+
+    for (int i = 0; i < nodesNumber; i++) {
+        int start_vertex = storage[i].startVertex;
+        int end_vertex = storage[i].endVertex;
+        int used = storage[i].possibleFlow;
+
+        Node *tempNode = new Node;
+        tempNode->startVertex = start_vertex;
+        tempNode->capacity = used;
+        tempNode->endVertex = end_vertex;
+        tempNode->nextNode = nodesInGraph[start_vertex];
+        tempNode->flow = 0;
+
+        nodesInGraph[start_vertex] = tempNode;
+    }
+
+}
 
 GraphAdjacentList::~GraphAdjacentList() {
 }
@@ -140,43 +176,7 @@ int GraphAdjacentList::dinicMaxFlow() {
     return maxFlow;
 }
 
-void GraphAdjacentList::loadData(int **matrix, int verticesNumber) {
-    this->graphSize = verticesNumber;
-    Vector<Edge> storage;
-    for (int i = 0; i < graphSize; i++) {
-        for (int j = 0; j < graphSize; j++) {
-            if (matrix[i][j] > 0) {
-                storage.push({i, j, matrix[i][j]});
-            }
-        }
-    }
 
-    int nodesNumber = storage.size;
-
-    nodesInGraph = new Node *[graphSize]();
-
-    verticesLevel = new int[graphSize];
-
-    sinkIndex = graphSize - 1;
-
-    for (int i = 0; i < graphSize; i++) nodesInGraph[i] = nullptr;
-
-    for (int i = 0; i < nodesNumber; i++) {
-        int start_vertex = storage[i].startVertex;
-        int end_vertex = storage[i].endVertex;
-        int used = storage[i].possibleFlow;
-
-        Node *tempNode = new Node;
-        tempNode->startVertex = start_vertex;
-        tempNode->capacity = used;
-        tempNode->endVertex = end_vertex;
-        tempNode->nextNode = nodesInGraph[start_vertex];
-        tempNode->flow = 0;
-
-        nodesInGraph[start_vertex] = tempNode;
-    }
-
-}
 
 
 

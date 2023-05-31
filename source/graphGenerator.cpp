@@ -5,8 +5,6 @@
 #include <cmath>
 #include <fstream>
 
-#define SEED 77
-
 void generateNodes(int startIndex, int endIndex, int **graphMatrix, int nodesPerVertex, bool *generated) {
     generated[startIndex] = true;
 

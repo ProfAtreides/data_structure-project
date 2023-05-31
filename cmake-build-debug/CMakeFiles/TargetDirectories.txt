@@ -1,4 +1,4 @@
-U:/Project/struktury danych/cmake-build-debug/CMakeFiles/program.dir
-U:/Project/struktury danych/cmake-build-debug/CMakeFiles/randomiser.dir
-U:/Project/struktury danych/cmake-build-debug/CMakeFiles/edit_cache.dir
-U:/Project/struktury danych/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/dambr/OneDrive/Dokumenty/GitHub/data_structure-project/cmake-build-debug/CMakeFiles/program.dir
+C:/Users/dambr/OneDrive/Dokumenty/GitHub/data_structure-project/cmake-build-debug/CMakeFiles/randomiser.dir
+C:/Users/dambr/OneDrive/Dokumenty/GitHub/data_structure-project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/dambr/OneDrive/Dokumenty/GitHub/data_structure-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

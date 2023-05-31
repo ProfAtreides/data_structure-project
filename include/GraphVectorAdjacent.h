@@ -10,9 +10,6 @@
 
 
 class GraphVectorAdjacent : public Graph {
-
-    //Vector of verticies, each vector has a vector of vertcies(first in pair)
-    //adjacent to the vertice with it's node weight
     int graphSize;
     int sinkIndex;
     int* verticeLevel;

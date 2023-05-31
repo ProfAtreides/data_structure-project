@@ -39,7 +39,6 @@ public:
 
     void loadData(int** matrix,int verticesNumber) override;
     void loadData(std::string fileName,int verticesNumber) override;
-    Node* getNode(int startVertex,int end_vertex, int weight, Node *nodes);
 
     void printGraph() const;
 

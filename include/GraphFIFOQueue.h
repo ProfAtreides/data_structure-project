@@ -1,8 +1,0 @@
-//
-// Created by dambr on 29.05.2023.
-//
-
-#ifndef PROGRAM_GRAPHFIFOQUEUE_H
-#define PROGRAM_GRAPHFIFOQUEUE_H
-
-#endif //PROGRAM_GRAPHFIFOQUEUE_H

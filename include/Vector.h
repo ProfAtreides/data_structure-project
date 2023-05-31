@@ -12,6 +12,7 @@ public:
     Vector();
     ~Vector();
     void push(T val);
+    void pop();
     void resize(int size);
     void remove(int index);
     void remove(int index,int amount);
@@ -20,6 +21,19 @@ public:
     T top();
     T& operator [](int n);
 };
+
+template<typename T>
+void Vector<T>::pop() {
+    if(size>0) {
+        size--;
+        T* temp = new T[capacity];
+        for (int i = 0; i < size; i++) {
+            temp[i] = data[i];
+        }
+        delete[] data;
+        data = temp;
+    }
+}
 
 template<typename T>
 Vector<T>::Vector() {
